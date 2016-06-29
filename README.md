@@ -1,3 +1,3 @@
 # Josephine
-Josephine - The Brave Chinchilla
-Second original game - Xmass 2015
+Josephine - The Brave Chinchilla<br>
+Second original game - Christmas 2015
