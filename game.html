@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Josephine - The Brave Chinchilla</title>
+    <style type="text/css">
+        body {
+            background: #3d8251;
+            -webkit-transition: 1s all;
+                    transition: 1s all;
+        }
+        #stage,
+        #josephine,
+        .cell,
+        .tree,
+        #monster {
+            position: absolute;
+        }
+        #container {
+            position: relative;
+            width: 920px;
+            height: 460px;
+            margin: 70px auto;
+            overflow: hidden;
+            border: 20px solid #f3f4be;
+        }
+        #stage {
+            background: white;
+            width: 920px;
+            height: 460px;
+        }
+        #josephine, #monster {
+            -webkit-transition: 0.2s left, 0.2s top;
+                    transition: 0.2s left, 0.2s top;
+        }
+        .cell {
+            width: 46px;
+            height: 46px;
+        }
+        #monster {
+            left: 874px;
+            top: 0;
+        }
+        #startScreen,
+        #winScreen,
+        #loseScreen {
+            position: absolute;
+            z-index: 100;
+            -webkit-transition: 1s all;
+                    transition: 1s all;
+        }
+        #winScreen,
+        #loseScreen {
+            opacity: 0;
+        }
+        #press_any_key {
+            position: absolute;
+            z-index: 110;
+            -webkit-animation: press_any_key 1s steps(2) infinite;
+                    animation: press_any_key 1s steps(2) infinite;   
+        }
+        @keyframes press_any_key {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="stage"></div>
+        <img id="josephine" src="assets/josephine.png">
+        <img id="startScreen" src="assets/startScreen.png">
+        <img id="press_any_key" src="assets/press_any_key.png">
+        <img id="winScreen" src="assets/winScreen.png">
+        <img id="loseScreen" src="assets/loseScreen.png">
+
+    </div>
+</body>
+    <script src="scripts/01_gameVars.js"></script>
+    <script src="scripts/02_randomFunctions_querySelector.js"></script>
+    <script src="scripts/03_listeners_colisionDetection.js"></script>
+    <script src="scripts/04_drawMap.js"></script>
+    <script src="scripts/05_monsterMovement.js"></script>
+    <script src="scripts/06_gameLogic.js"></script>
+</html>
